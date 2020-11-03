@@ -1,0 +1,46 @@
+<header class="banner" role="banner">
+  <div class="wrapper">
+      <nav id="navbar" role="navigation" aria-label="main navigation">
+          <a class="brand" href="/" aria-label="Navigate back to Home Page" title="Navigate back to Home Page">
+              <img src="/assets/img/logo.jpg" width="76" height="85"
+                  alt=""
+                  title="">
+              <h1>Company<br>
+                  <span class="subtitle">
+                      Tagline
+                  </span>
+              </h1>
+          </a>
+          <div class="header-buttons">
+              <a class="button primary contact-btn"
+                  href=""
+                  target="blank" rel="noopener" title="Call">Call</a>
+              <button type="button" role="button" class="hamburger"
+                  aria-controls="menu-container" aria-haspopup="true" aria-label="toggle main menu visibility">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <span class="line"></span>
+              </button>
+          </div>
+
+          <div class="menu-container">
+              <ul class="nav">
+                  <li>
+                    <a class="nav-call"
+                        href="https://www.my-physio.co.uk:8443/OnlineOptions/PageRenderer?si=TEG1201O1L3VB7G2VRMN96J4341IR54A1D433MB7"
+                        target="blank" rel="noopener" title="Book an appointment">
+                        <span class="nav-call-title">Book an appointment?</span><br>
+                        Online Booking
+                    </a>
+                  </li>
+                  {% for item in navigation.items %}
+                  <li class="nav-item">
+                      <a class="nav-link" href="{{ item.url }}" title="{{ item.title }}"
+                          {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.navText }}</a>
+                  </li>
+                  {% endfor %}
+              </ul>
+          </div>
+      </nav>
+  </div>
+</header>

@@ -1,0 +1,34 @@
+{
+  "name": "Boilerplate Site",
+  "url": "https://changethis.com",
+  "author": {
+      "name":       "Grant Smith",
+      "email":      "gran@transition-creative.co.uk",
+      "handle":     "@granttransition",
+      "avatar":     "site/assets/images/…"
+  },
+  "images": {
+      "logo":       "site/assets/images/…",
+      "favicon":    "site/assets/images/…",
+      "twitter":    "site/assets/images/…",
+      "og":         "site/assets/images/…"
+  },
+  "social_links": {
+      "facebook":   "https://www.facebook.com/transitioncreative/",
+      "twitter":    "https://twitter.com/GrantTransition",
+      "linkedin":   "https://www.linkedin.com/in/transitioncreative/"
+  },
+  "address": {
+      "street":     "1-11 Alvin Street",
+      "street_2":   "",
+      "city":       "Gloucester",
+      "county":     "Gloucestershire",
+      "postcode":   "GL1 3EJ",
+      "country":    "GB"
+  },
+  "contact": {
+      "phone":      "01452 346308‬",
+      "mobile":     "07515 376861‬",
+      "email":      "gran@transition-creative.co.uk"
+  }
+}

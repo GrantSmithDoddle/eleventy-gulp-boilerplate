@@ -1,0 +1,19 @@
+.flow-sm > * + * {
+  margin-top: $size-scale-400;
+}
+
+.flow > * + * {
+  margin-top: $size-scale-600;
+}
+
+.flow-large > * + * {
+  margin-top: $size-scale-900;
+}
+
+.flow-xl > * + * {
+  margin-top: 6.25rem;
+
+  @include respond-to('medium'){
+    margin-top: 8.75rem;
+  }
+}

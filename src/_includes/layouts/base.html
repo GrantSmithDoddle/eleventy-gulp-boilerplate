@@ -1,0 +1,54 @@
+{% set assetHash = global.random() %}
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    {% include "partials/base-layout/meta-info.html" -%}
+    <link rel="stylesheet" href="/assets/css/critical.min.css?{{ assetHash }}"/>
+    {% if pageCriticalStyles %}
+      {% for item in pageCriticalStyles %}
+        <link rel="stylesheet" href="/assets/{{ item }}?{{ assetHash }}"/>
+      {% endfor %}
+    {% endif %}
+    {% include "partials/base-layout/favicon.html" -%}
+    <script type='application/ld+json'>
+      {
+        "@context": "http://www.schema.org",
+        "@type": "ProfessionalService",
+        "name": "Square One Renovation",
+        "url": "https://www.squareonerenovation.co.uk/",
+        "logo": "https://squareonerenovation.co.uk/assets/svg/Square-One-Logo.svg",
+        "image": "https://squareonerenovation.co.uk/assets/img/social-share-img.jpg",
+        "description": "Square One Renovation | Home Renovation in Safe Hands",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Room 17 Lower Basement, Normandy House, 305-309 High Street, ",
+          "addressLocality": "Cheltenham",
+          "addressRegion": "Gloucestershire",
+          "postalCode": "GL50 3HW",
+          "addressCountry": "United Kingdom"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "52.040615",
+          "longitude": "-2.426684"
+        },
+        "openingHours": "Mo, Tu, We, Th, Fr 08:30-15:00",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "07834725324‬",
+          "contactType": "customer service"
+        }
+      }
+    </script>
+  </head>
+  <body class="site-wrap">
+    {% include "partials/base-layout/site-head.html" -%}
+    <main tabindex="-1" id="main-content">
+      {% block content -%} {% endblock -%}
+    </main>
+    {% include "partials/base-layout/footer.html" -%}
+  </body>
+</html>
